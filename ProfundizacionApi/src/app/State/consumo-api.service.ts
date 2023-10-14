@@ -15,8 +15,8 @@ export class ConsumoApiService {
 
   ) { }
 
-  getPlanetas():Observable<any>{
-    return this.http.get(`${this.BASE_URL}/planets/`);
+  getFilms():Observable<any>{
+    return this.http.get(`${this.BASE_URL}/films/`);
   }
 
 }
