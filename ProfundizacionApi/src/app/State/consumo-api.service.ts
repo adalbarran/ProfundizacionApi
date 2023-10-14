@@ -6,13 +6,17 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ConsumoApiService {
+
   private BASE_URL = 'https://swapi.dev/api/';
+
   constructor(
+
     private http : HttpClient
+
   ) { }
 
   getPlanetas():Observable<any>{
-    return this.http.get(` ${this.BASE_URL}/planets/`);
+    return this.http.get(`${this.BASE_URL}/planets/`);
   }
 
 }

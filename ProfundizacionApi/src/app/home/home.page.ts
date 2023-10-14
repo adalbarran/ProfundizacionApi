@@ -7,13 +7,14 @@ import { ConsumoApiService } from '../State/consumo-api.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit{
-
+ public characters: any;
   constructor(private rmapi : ConsumoApiService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.rmapi.getPlanetas().subscribe(
-      (data) => {
+      (data)=>{
         console.log(data);
+        this.characters = data;
         localStorage.setItem('Planetas', JSON.stringify(data.result))
       }
     )

@@ -12,6 +12,9 @@
     </ion-toolbar> 
   </ion-header>
 
-  <ion-button onclick="Ver()">Ver</ion-button>
+  <ion-button>Ver</ion-button>
+  <div *ngFor = "let character of characters.results">
+    <p> {{character.name}} </p>
 
+  </div>
 </ion-content>
