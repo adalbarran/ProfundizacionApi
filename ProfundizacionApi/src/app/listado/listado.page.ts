@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-listado',
   templateUrl: './listado.page.html',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListadoPage implements OnInit {
   public pelicula : any;
-  constructor() { }
+  constructor( private router: Router) { }
 
   ngOnInit() {
     
@@ -20,5 +21,7 @@ export class ListadoPage implements OnInit {
     }
 
   }
-
+volver(){
+  this.router.navigateByUrl('/');
+}
 }
