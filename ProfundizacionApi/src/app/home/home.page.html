@@ -14,9 +14,9 @@
 
   <div *ngFor = "let pelicula of movie?.results">
     <ion-title>
-      Nombre pelicula
+    Nombre pelicula
     </ion-title>
-    <p> {{pelicula?.name}} </p>
+    <p> {{pelicula?.title}} </p>
     <ion-button type = "button" (click) = "detalle(pelicula)">Ver Detalle</ion-button>
 
   </div>
